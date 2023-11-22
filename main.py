@@ -6,7 +6,7 @@ Created on Wed Nov 22 21:57:19 2023
 """
 
 import numpy as np
-import matplotlib.pyplot as plt
+import matplotlib.pyplot as pt
 
 # Load your data from the CSV file
 csv_path = 'https://raw.githubusercontent.com/sankhapanineog/q2/main/data12.csv'
@@ -79,13 +79,13 @@ threshold = 0.5
 predicted_labels = (predicted_test_output > threshold).astype(int)
 
 # Plotting
-plt.figure(figsize=(12, 6))
-plt.plot(data, label='Original Data', alpha=0.5)
-plt.scatter(np.arange(split_index, len(data)), test_labels, color='blue', label='Actual Labels (Test Data)')
-plt.plot(np.arange(split_index, len(data)), predicted_labels, label='Predicted Labels (Unhealthy)', linestyle='dashed', color='red')
-plt.axhline(y=threshold, color='gray', linestyle='--', label='Threshold')
-plt.title('Health Forecasting Neural Network')
-plt.xlabel('Time')
-plt.ylabel('Health Status')
-plt.legend()
-plt.show()
+pt.figure(figsize=(12, 6))
+pt.plot(data, label='Original Data', alpha=0.5)
+pt.scatter(np.arange(split_index, len(data)), test_labels, color='blue', label='Actual Labels (Test Data)')
+pt.plot(np.arange(split_index, len(data)), predicted_labels, label='Predicted Labels (Unhealthy)', linestyle='dashed', color='red')
+pt.axhline(y=threshold, color='gray', linestyle='--', label='Threshold')
+pt.title('Health Forecasting Neural Network')
+pt.xlabel('Time')
+pt.ylabel('Health Status')
+pt.legend()
+pt.show()
