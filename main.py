@@ -9,7 +9,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Load your data from the CSV file
-csv_path = r"C:\Users\Sankhapani\Downloads\data12.csv"
+csv_path = "https://github.com/sankhapanineog/q2/blob/main/data12.csv"
 data = np.genfromtxt(csv_path, delimiter=',')
 
 # Normalize the data (optional but recommended)
