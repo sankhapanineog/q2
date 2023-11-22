@@ -9,7 +9,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Load your data from the CSV file
-csv_path = "https://github.com/sankhapanineog/q2/blob/main/data12.csv"
+csv_path = 'https://raw.githubusercontent.com/sankhapanineog/q2/main/data12.csv'
 data = np.genfromtxt(csv_path, delimiter=',')
 
 # Normalize the data (optional but recommended)
@@ -20,7 +20,6 @@ threshold = 0.5  # Set a suitable threshold for labeling as unhealthy
 labels = np.zeros_like(data)
 labels[data > threshold] = 1
 
-# Split the data into training and testing sets
 split_ratio = 0.8
 split_index = int(len(data) * split_ratio)
 
